@@ -17,6 +17,10 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
+!docker/data
+!docker/logs
+logs/*
+
 ### IntelliJ IDEA ###
 .idea
 *.iws
