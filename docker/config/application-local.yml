@@ -1,0 +1,70 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    p6spy:
+      enabled: true
+      appender: com.p6spy.engine.spy.appender.Slf4JLogger
+      logMessageFormat:
+        p6spy: "%(currentTime)|%(executionTime)|%(category)|%(sqlSingleLine)"
+  jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    database: MYSQL
+    generate-ddl: false
+    properties:
+      hibernate:
+        id:
+          new_generator_mapping: false
+        default_batch_fetch_size: 100 # N+1 문제 발생시 in절로 100개 단위로 나눠서 호출
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: none  # 운영시에는 반드시 none, 테이블은 수동으로 직접 생성
+    open-in-view: false
+
+logging:
+  level:
+    root: INFO
+    com.pretest.leesangyub: DEBUG
+    org.spring.framework: INFO
+
+secret: easytask
+
+taskapp:
+  dbs:
+    pridb:
+      driver: org.mariadb.jdbc.Driver
+      ip: host.docker.internal
+      port: 3306
+      database: dev
+      user: user
+      pass: ENC(jf1BC+/PLScnFiZ7wJNJCTiPY1xHnNFd)  # JASYPT로 암호화. user1357!
+    # subdb:
+    #  driver: org.mariadb.jdbc.Driver
+    #  ip: localhost
+    #  port: 3307
+    #  database: dev
+    #  user: user
+    #  pass: user1357!
+  redis:
+    host: host.docker.internal
+    port: 6379
+    pass: ENC(iMh6wGGRSVsaQa/188Pvmsepi7T9a4q3) # JASYPT로 암호화 redis1357!
+
+  freelancer:
+    table_name: fl_profile
+    schedule_interval: 30000 # 30초
+
+  payment-gateway: #
+    default-pg: toss # toss, paypal, kakao, naver 등 다양.. (기본 PG사)
+    toss:
+      secret-key: ENC(p/ZlolrAyvQ6p05CsXkodX01GZH3DjB758DEbDhCmIZctHgTz36WooiC0+HpGWNQ) # JASYPT로 암호화 test_gsk_docs_OaPz8L5KdmQXkzRz3y47BMw6
+      confirm-url: https://api.tosspayments.com/v1/payments/confirm
+
+  api:
+    title: "사전과제 API 명세서"
+    description: "이지태스크 사전과제 API 명세서"
+    version: "v1.0"
+    server-url: "http://localhost:9090/"
+    server-description: "사전과제 로컬서버"

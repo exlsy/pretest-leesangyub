@@ -1,0 +1,23 @@
+server:
+  port: 9090
+  forward-headers-strategy: framework
+
+spring:
+  application:
+    name: pretask
+  profiles:
+    active: local
+  web:
+    resources:
+      static-locations: classpath:/static/
+
+logging:
+  pattern:
+    console: "[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] %logger{36}.%method:%line %highlight(%-5level) %msg%n"
+    file: "[%d{yyyy-MM-dd HH:mm:ss.SSS}] [%t] %class{0}.%method:%line %-5level %msg%n"
+  charset:
+    console: UTF-8
+    file: UTF-8
+  file:
+    path: ./logs
+    name: pretask

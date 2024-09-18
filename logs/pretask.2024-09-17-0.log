@@ -1,0 +1,758 @@
+[2024-09-17 19:28:23.157] [background-preinit] Version.<clinit>:21 INFO  HV000001: Hibernate Validator 8.0.1.Final
+[2024-09-17 19:28:23.197] [main] StartupInfoLogger.logStarting:50 INFO  Starting PretaskApplication using Java 21.0.2 with PID 16088 (C:\java-workspace\pretest-leesangyub\out\production\classes started by exsyl in C:\java-workspace\pretest-leesangyub)
+[2024-09-17 19:28:23.197] [main] StartupInfoLogger.logStarting:51 DEBUG Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-17 19:28:23.198] [main] SpringApplication.logStartupProfileInfo:660 INFO  The following 1 profile is active: "local"
+[2024-09-17 19:28:23.826] [main] RepositoryConfigurationDelegate.multipleStoresDetected:295 INFO  Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-09-17 19:28:23.827] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:143 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-17 19:28:23.971] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:211 INFO  Finished Spring Data repository scanning in 137 ms. Found 1 JPA repository interface.
+[2024-09-17 19:28:24.261] [main] RepositoryConfigurationDelegate.multipleStoresDetected:295 INFO  Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-09-17 19:28:24.263] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:143 INFO  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-09-17 19:28:24.286] [main] RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate:320 INFO  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.pretest.leesangyub.repository.pri.FreelancerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+[2024-09-17 19:28:24.287] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:211 INFO  Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+[2024-09-17 19:28:24.555] [main] EnableEncryptablePropertiesBeanFactoryPostProcessor.postProcessBeanFactory:44 INFO  Post-processing PropertySource instances
+[2024-09-17 19:28:24.556] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+[2024-09-17 19:28:24.556] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[2024-09-17 19:28:24.556] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[2024-09-17 19:28:24.557] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[2024-09-17 19:28:24.558] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[2024-09-17 19:28:24.558] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[2024-09-17 19:28:24.558] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource Config resource 'class path resource [application-local.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[2024-09-17 19:28:24.558] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[2024-09-17 19:28:24.882] [main] DefaultLazyPropertyFilter.lambda$new$2:45 INFO  Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[2024-09-17 19:28:24.890] [main] DefaultLazyPropertyResolver.lambda$new$2:46 INFO  Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[2024-09-17 19:28:24.891] [main] DefaultLazyPropertyDetector.lambda$new$2:44 INFO  Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[2024-09-17 19:28:25.073] [main] TomcatWebServer.initialize:111 INFO  Tomcat initialized with port 9090 (http)
+[2024-09-17 19:28:25.083] [main] DirectJDKLog.log:173 INFO  Initializing ProtocolHandler ["http-nio-9090"]
+[2024-09-17 19:28:25.087] [main] DirectJDKLog.log:173 INFO  Starting service [Tomcat]
+[2024-09-17 19:28:25.087] [main] DirectJDKLog.log:173 INFO  Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-17 19:28:25.176] [main] DirectJDKLog.log:173 INFO  Initializing Spring embedded WebApplicationContext
+[2024-09-17 19:28:25.176] [main] ServletWebServerApplicationContext.prepareWebApplicationContext:296 INFO  Root WebApplicationContext: initialization completed in 1938 ms
+[2024-09-17 19:28:25.243] [main] GenericFilterBean.init:240 DEBUG Filter 'jwtAuthorizationFilter' configured for use
+[2024-09-17 19:28:25.264] [main] DefaultLazyEncryptor.lambda$new$1:41 INFO  Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@27d73d22 with name: jasyptStringEncryptor
+[2024-09-17 19:28:25.285] [main] PriJpaConfig.priDataSource:34 INFO  org.mariadb.jdbc.Driver localhost 3306 dev user
+[2024-09-17 19:28:25.386] [main] LogHelper.logPersistenceUnitInformation:31 INFO  HHH000204: Processing PersistenceUnitInfo [name: priEntityManager]
+[2024-09-17 19:28:25.460] [main] Version.logVersion:44 INFO  HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-09-17 19:28:25.495] [main] RegionFactoryInitiator.initiateService:50 INFO  HHH000026: Second-level cache disabled
+[2024-09-17 19:28:25.879] [main] SpringPersistenceUnitInfo.addTransformer:87 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-17 19:28:25.906] [main] HikariDataSource.getConnection:109 INFO  HikariPool-1 - Starting...
+[2024-09-17 19:28:25.988] [main] HikariPool.checkFailFast:554 INFO  HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3130ca39
+[2024-09-17 19:28:25.989] [main] HikariDataSource.getConnection:122 INFO  HikariPool-1 - Start completed.
+[2024-09-17 19:28:26.021] [main] DialectFactoryImpl.constructDialect:153 WARN  HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-17 19:28:26.826] [main] JtaPlatformInitiator.initiateService:59 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-17 19:28:26.828] [main] AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 INFO  Initialized JPA EntityManagerFactory for persistence unit 'priEntityManager'
+[2024-09-17 19:28:27.571] [main] UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 WARN  
+
+Using generated security password: 3881e70b-91e9-44ea-993f-08f830956260
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2024-09-17 19:28:27.589] [main] InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure:113 INFO  Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2024-09-17 19:28:28.533] [main] DirectJDKLog.log:173 INFO  Starting ProtocolHandler ["http-nio-9090"]
+[2024-09-17 19:28:28.547] [main] TomcatWebServer.start:243 INFO  Tomcat started on port 9090 (http) with context path '/'
+[2024-09-17 19:28:28.548] [main] RefreshScopeRefreshedEventListener.onApplicationEvent:70 INFO  Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+[2024-09-17 19:28:28.548] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source systemProperties refreshed
+[2024-09-17 19:28:28.548] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source systemEnvironment refreshed
+[2024-09-17 19:28:28.548] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source random refreshed
+[2024-09-17 19:28:28.548] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source Config resource 'class path resource [application-local.yml]' via location 'optional:classpath:/' refreshed
+[2024-09-17 19:28:28.548] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+[2024-09-17 19:28:28.548] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+[2024-09-17 19:28:28.549] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[2024-09-17 19:28:28.549] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+[2024-09-17 19:28:28.558] [main] StartupInfoLogger.logStarted:56 INFO  Started PretaskApplication in 6.0 seconds (process running for 6.736)
+[2024-09-17 19:28:28.561] [main] AppInitializer.run:21 INFO  AppInitializer Args: []
+[2024-09-17 19:28:28.562] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:28:28.630] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:28:28.642] [main] Slf4JLogger.logSQL:60 INFO  #1726568908642 | took 14ms | statement | connection 1| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+SELECT count(*) FROM information_schema.tables WHERE table_name = ?
+SELECT count(*) FROM information_schema.tables WHERE table_name = 'fl_profile';
+[2024-09-17 19:28:28.657] [main] FreelancerServiceImpl.lambda$createFreelancerTable$0:59 INFO  ----- fl_profile 테이블이 존재합니다. 
+[2024-09-17 19:28:28.659] [main] Slf4JLogger.logSQL:60 INFO  #1726568908659 | took 0ms | commit | connection 1| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+
+;
+[2024-09-17 19:28:28.977] [main] Slf4JLogger.logSQL:60 INFO  #1726568908977 | took 61ms | statement | connection 2| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+select count(*) from fl_profile f1_0
+select count(*) from fl_profile f1_0;
+[2024-09-17 19:28:28.978] [main] Slf4JLogger.logSQL:60 INFO  #1726568908978 | took 1ms | commit | connection 2| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+
+;
+[2024-09-17 19:28:40.545] [http-nio-9090-exec-1] DirectJDKLog.log:173 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-17 19:28:40.545] [http-nio-9090-exec-1] FrameworkServlet.initServletBean:532 INFO  Initializing Servlet 'dispatcherServlet'
+[2024-09-17 19:28:40.547] [http-nio-9090-exec-1] FrameworkServlet.initServletBean:554 INFO  Completed initialization in 2 ms
+[2024-09-17 19:28:41.167] [http-nio-9090-exec-8] AbstractOpenApiResource.getOpenApi:387 INFO  Init duration for springdoc-openapi is: 275 ms
+[2024-09-17 19:28:58.562] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:28:58.563] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:29:28.568] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:29:28.569] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:29:58.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:29:58.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:30:28.568] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:30:28.569] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:30:58.563] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:30:58.564] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:31:28.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:31:28.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:31:58.560] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:31:58.561] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:32:28.566] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:32:28.567] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:32:58.564] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:32:58.565] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:33:28.570] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:33:28.571] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:33:58.567] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:33:58.568] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:34:28.569] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:34:28.570] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:34:58.569] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:34:58.570] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:35:28.557] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:35:28.558] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:35:58.562] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:35:58.563] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:36:28.563] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:36:28.564] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:36:58.557] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:36:58.558] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:37:28.567] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:37:28.568] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:37:58.558] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:37:58.559] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:38:28.559] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:38:28.560] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:38:58.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:38:58.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:39:28.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:39:28.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:39:58.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:39:58.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:40:28.569] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:40:28.570] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:40:58.566] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:40:58.567] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:41:28.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:41:28.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:41:58.570] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:41:58.571] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:42:28.557] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:42:28.558] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:42:58.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:42:58.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:43:28.569] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:43:28.570] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:43:58.561] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:43:58.562] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:44:28.570] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:44:28.571] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:44:58.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:44:58.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:45:28.560] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:45:28.561] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:45:58.570] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:45:58.571] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:46:28.572] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:46:28.573] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:46:58.569] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:46:58.571] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:47:28.569] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:47:28.570] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:47:58.559] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:47:58.560] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:48:28.566] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:48:28.567] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:48:58.565] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:48:58.566] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:49:28.569] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:49:28.571] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:49:58.559] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:49:58.560] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:50:28.557] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:50:28.558] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:50:58.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:50:58.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:51:28.559] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:51:28.560] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:51:58.562] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:51:58.563] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:52:28.560] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:52:28.561] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:52:58.561] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:52:58.562] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:53:28.559] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:53:28.560] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:53:58.568] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:53:58.569] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:54:28.565] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:54:28.566] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:54:58.564] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:54:58.565] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:55:28.565] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:55:28.566] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:55:58.567] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:55:58.568] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:56:28.563] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:56:28.564] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:56:58.572] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:56:58.573] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:57:28.563] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:57:28.564] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:57:58.564] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:57:58.565] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:58:28.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:58:28.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:58:58.565] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:58:58.566] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:59:28.561] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:59:28.562] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 19:59:58.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 19:59:58.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:00:28.568] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:00:28.569] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:00:58.565] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:00:58.566] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:01:28.562] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:01:28.563] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:01:58.564] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:01:58.565] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:02:28.557] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:02:28.558] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:02:58.569] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:02:58.570] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:03:28.558] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:03:28.559] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:03:58.566] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:03:58.567] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:04:28.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:04:28.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:04:58.568] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:04:58.569] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:05:28.562] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:05:28.563] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:05:58.561] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:05:58.562] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:06:28.570] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:06:28.571] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:06:58.572] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:06:58.573] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:07:28.566] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:07:28.567] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:07:58.560] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:07:58.561] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:08:28.561] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:08:28.562] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:08:58.569] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:08:58.570] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:09:28.560] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:09:28.561] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:09:58.559] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:09:58.561] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:10:28.563] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:10:28.565] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:10:58.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:10:58.572] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:11:28.568] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:11:28.569] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:11:58.563] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:11:58.564] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:12:28.565] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:12:28.566] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:12:58.569] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:12:58.570] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:13:28.563] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:13:28.564] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:13:58.560] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:13:58.561] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:14:28.557] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:14:28.558] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:14:58.558] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:14:58.559] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:15:28.572] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:15:28.573] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:15:58.570] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:15:58.571] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:16:28.567] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:16:28.568] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:16:58.557] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:16:58.558] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:17:28.568] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:17:28.569] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:17:58.557] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:17:58.558] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:18:28.563] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:18:28.564] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:18:58.570] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:18:58.571] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:19:28.564] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:19:28.565] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:19:58.568] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 20:19:58.569] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 20:20:22.280] [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean.destroy:650 INFO  Closing JPA EntityManagerFactory for persistence unit 'priEntityManager'
+[2024-09-17 20:20:22.282] [SpringApplicationShutdownHook] HikariDataSource.close:349 INFO  HikariPool-1 - Shutdown initiated...
+[2024-09-17 20:20:22.291] [SpringApplicationShutdownHook] HikariDataSource.close:351 INFO  HikariPool-1 - Shutdown completed.
+[2024-09-17 22:29:49.721] [background-preinit] Version.<clinit>:21 INFO  HV000001: Hibernate Validator 8.0.1.Final
+[2024-09-17 22:29:49.755] [main] StartupInfoLogger.logStarting:50 INFO  Starting PretaskApplication using Java 21.0.2 with PID 7352 (C:\java-workspace\pretest-leesangyub\out\production\classes started by exsyl in C:\java-workspace\pretest-leesangyub)
+[2024-09-17 22:29:49.755] [main] StartupInfoLogger.logStarting:51 DEBUG Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-17 22:29:49.756] [main] SpringApplication.logStartupProfileInfo:660 INFO  The following 1 profile is active: "local"
+[2024-09-17 22:29:50.374] [main] RepositoryConfigurationDelegate.multipleStoresDetected:295 INFO  Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-09-17 22:29:50.375] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:143 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-17 22:29:50.497] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:211 INFO  Finished Spring Data repository scanning in 116 ms. Found 1 JPA repository interface.
+[2024-09-17 22:29:50.746] [main] RepositoryConfigurationDelegate.multipleStoresDetected:295 INFO  Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-09-17 22:29:50.747] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:143 INFO  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-09-17 22:29:50.767] [main] RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate:320 INFO  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.pretest.leesangyub.repository.pri.FreelancerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+[2024-09-17 22:29:50.767] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:211 INFO  Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+[2024-09-17 22:29:51.016] [main] EnableEncryptablePropertiesBeanFactoryPostProcessor.postProcessBeanFactory:44 INFO  Post-processing PropertySource instances
+[2024-09-17 22:29:51.017] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+[2024-09-17 22:29:51.017] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[2024-09-17 22:29:51.017] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[2024-09-17 22:29:51.018] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[2024-09-17 22:29:51.018] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[2024-09-17 22:29:51.019] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[2024-09-17 22:29:51.019] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource Config resource 'class path resource [application-local.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[2024-09-17 22:29:51.019] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[2024-09-17 22:29:51.280] [main] DefaultLazyPropertyFilter.lambda$new$2:45 INFO  Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[2024-09-17 22:29:51.289] [main] DefaultLazyPropertyResolver.lambda$new$2:46 INFO  Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[2024-09-17 22:29:51.291] [main] DefaultLazyPropertyDetector.lambda$new$2:44 INFO  Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[2024-09-17 22:29:51.471] [main] TomcatWebServer.initialize:111 INFO  Tomcat initialized with port 9090 (http)
+[2024-09-17 22:29:51.481] [main] DirectJDKLog.log:173 INFO  Initializing ProtocolHandler ["http-nio-9090"]
+[2024-09-17 22:29:51.486] [main] DirectJDKLog.log:173 INFO  Starting service [Tomcat]
+[2024-09-17 22:29:51.486] [main] DirectJDKLog.log:173 INFO  Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-17 22:29:51.550] [main] DirectJDKLog.log:173 INFO  Initializing Spring embedded WebApplicationContext
+[2024-09-17 22:29:51.550] [main] ServletWebServerApplicationContext.prepareWebApplicationContext:296 INFO  Root WebApplicationContext: initialization completed in 1757 ms
+[2024-09-17 22:29:51.614] [main] GenericFilterBean.init:240 DEBUG Filter 'jwtAuthorizationFilter' configured for use
+[2024-09-17 22:29:51.634] [main] DefaultLazyEncryptor.lambda$new$1:41 INFO  Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@1c2096c6 with name: jasyptStringEncryptor
+[2024-09-17 22:29:51.654] [main] PriJpaConfig.priDataSource:34 INFO  org.mariadb.jdbc.Driver localhost 3306 dev user
+[2024-09-17 22:29:51.735] [main] LogHelper.logPersistenceUnitInformation:31 INFO  HHH000204: Processing PersistenceUnitInfo [name: priEntityManager]
+[2024-09-17 22:29:51.787] [main] Version.logVersion:44 INFO  HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-09-17 22:29:51.815] [main] RegionFactoryInitiator.initiateService:50 INFO  HHH000026: Second-level cache disabled
+[2024-09-17 22:29:52.158] [main] SpringPersistenceUnitInfo.addTransformer:87 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-17 22:29:52.184] [main] HikariDataSource.getConnection:109 INFO  HikariPool-1 - Starting...
+[2024-09-17 22:29:52.260] [main] HikariPool.checkFailFast:554 INFO  HikariPool-1 - Added connection org.mariadb.jdbc.Connection@7615666e
+[2024-09-17 22:29:52.261] [main] HikariDataSource.getConnection:122 INFO  HikariPool-1 - Start completed.
+[2024-09-17 22:29:52.289] [main] DialectFactoryImpl.constructDialect:153 WARN  HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-17 22:29:53.055] [main] JtaPlatformInitiator.initiateService:59 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-17 22:29:53.058] [main] AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 INFO  Initialized JPA EntityManagerFactory for persistence unit 'priEntityManager'
+[2024-09-17 22:29:53.721] [main] UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 WARN  
+
+Using generated security password: f703bc5f-8c54-4fdc-ad57-fb0e7c58fdfd
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2024-09-17 22:29:53.734] [main] InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure:113 INFO  Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2024-09-17 22:29:54.544] [main] DirectJDKLog.log:173 INFO  Starting ProtocolHandler ["http-nio-9090"]
+[2024-09-17 22:29:54.557] [main] TomcatWebServer.start:243 INFO  Tomcat started on port 9090 (http) with context path '/'
+[2024-09-17 22:29:54.558] [main] RefreshScopeRefreshedEventListener.onApplicationEvent:70 INFO  Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+[2024-09-17 22:29:54.558] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source systemProperties refreshed
+[2024-09-17 22:29:54.558] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source systemEnvironment refreshed
+[2024-09-17 22:29:54.558] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source random refreshed
+[2024-09-17 22:29:54.558] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source Config resource 'class path resource [application-local.yml]' via location 'optional:classpath:/' refreshed
+[2024-09-17 22:29:54.558] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+[2024-09-17 22:29:54.558] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+[2024-09-17 22:29:54.559] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[2024-09-17 22:29:54.559] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+[2024-09-17 22:29:54.567] [main] StartupInfoLogger.logStarted:56 INFO  Started PretaskApplication in 5.273 seconds (process running for 5.769)
+[2024-09-17 22:29:54.570] [main] AppInitializer.run:21 INFO  AppInitializer Args: []
+[2024-09-17 22:29:54.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:29:54.633] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:29:54.638] [main] Slf4JLogger.logSQL:60 INFO  #1726579794638 | took 7ms | statement | connection 1| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+SELECT count(*) FROM information_schema.tables WHERE table_name = ?
+SELECT count(*) FROM information_schema.tables WHERE table_name = 'fl_profile';
+[2024-09-17 22:29:54.651] [main] FreelancerServiceImpl.lambda$createFreelancerTable$0:59 INFO  ----- fl_profile 테이블이 존재합니다. 
+[2024-09-17 22:29:54.652] [main] Slf4JLogger.logSQL:60 INFO  #1726579794652 | took 0ms | commit | connection 1| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+
+;
+[2024-09-17 22:29:54.886] [main] Slf4JLogger.logSQL:60 INFO  #1726579794886 | took 1ms | statement | connection 2| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+select count(*) from fl_profile f1_0
+select count(*) from fl_profile f1_0;
+[2024-09-17 22:29:54.888] [main] Slf4JLogger.logSQL:60 INFO  #1726579794888 | took 0ms | commit | connection 2| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+
+;
+[2024-09-17 22:30:07.694] [http-nio-9090-exec-1] DirectJDKLog.log:173 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-17 22:30:07.695] [http-nio-9090-exec-1] FrameworkServlet.initServletBean:532 INFO  Initializing Servlet 'dispatcherServlet'
+[2024-09-17 22:30:07.696] [http-nio-9090-exec-1] FrameworkServlet.initServletBean:554 INFO  Completed initialization in 1 ms
+[2024-09-17 22:30:08.148] [http-nio-9090-exec-9] AbstractOpenApiResource.getOpenApi:387 INFO  Init duration for springdoc-openapi is: 265 ms
+[2024-09-17 22:30:24.567] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:30:24.569] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:30:54.572] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:30:54.574] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:31:24.577] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:31:24.578] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:31:54.574] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:31:54.576] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:32:24.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:32:24.573] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:32:54.573] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:32:54.575] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:33:24.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:33:24.573] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:33:54.571] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:33:54.573] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:34:24.577] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:34:24.579] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:34:54.577] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:34:54.579] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:35:24.579] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:35:24.581] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:35:54.576] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:35:54.577] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:36:24.570] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:36:24.571] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:36:27.527] [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean.destroy:650 INFO  Closing JPA EntityManagerFactory for persistence unit 'priEntityManager'
+[2024-09-17 22:36:27.529] [SpringApplicationShutdownHook] HikariDataSource.close:349 INFO  HikariPool-1 - Shutdown initiated...
+[2024-09-17 22:36:27.537] [SpringApplicationShutdownHook] HikariDataSource.close:351 INFO  HikariPool-1 - Shutdown completed.
+[2024-09-17 22:36:31.220] [background-preinit] Version.<clinit>:21 INFO  HV000001: Hibernate Validator 8.0.1.Final
+[2024-09-17 22:36:31.248] [main] StartupInfoLogger.logStarting:50 INFO  Starting PretaskApplication using Java 21.0.2 with PID 27764 (C:\java-workspace\pretest-leesangyub\out\production\classes started by exsyl in C:\java-workspace\pretest-leesangyub)
+[2024-09-17 22:36:31.249] [main] StartupInfoLogger.logStarting:51 DEBUG Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-17 22:36:31.249] [main] SpringApplication.logStartupProfileInfo:660 INFO  The following 1 profile is active: "local"
+[2024-09-17 22:36:31.821] [main] RepositoryConfigurationDelegate.multipleStoresDetected:295 INFO  Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-09-17 22:36:31.821] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:143 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-17 22:36:31.938] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:211 INFO  Finished Spring Data repository scanning in 110 ms. Found 1 JPA repository interface.
+[2024-09-17 22:36:32.204] [main] RepositoryConfigurationDelegate.multipleStoresDetected:295 INFO  Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-09-17 22:36:32.206] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:143 INFO  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-09-17 22:36:32.231] [main] RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate:320 INFO  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.pretest.leesangyub.repository.pri.FreelancerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+[2024-09-17 22:36:32.231] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:211 INFO  Finished Spring Data repository scanning in 17 ms. Found 0 Redis repository interfaces.
+[2024-09-17 22:36:32.471] [main] EnableEncryptablePropertiesBeanFactoryPostProcessor.postProcessBeanFactory:44 INFO  Post-processing PropertySource instances
+[2024-09-17 22:36:32.472] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+[2024-09-17 22:36:32.472] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[2024-09-17 22:36:32.472] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[2024-09-17 22:36:32.473] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[2024-09-17 22:36:32.473] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[2024-09-17 22:36:32.473] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[2024-09-17 22:36:32.473] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource Config resource 'class path resource [application-local.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[2024-09-17 22:36:32.474] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[2024-09-17 22:36:32.726] [main] DefaultLazyPropertyFilter.lambda$new$2:45 INFO  Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[2024-09-17 22:36:32.736] [main] DefaultLazyPropertyResolver.lambda$new$2:46 INFO  Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[2024-09-17 22:36:32.738] [main] DefaultLazyPropertyDetector.lambda$new$2:44 INFO  Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[2024-09-17 22:36:32.912] [main] TomcatWebServer.initialize:111 INFO  Tomcat initialized with port 9090 (http)
+[2024-09-17 22:36:32.920] [main] DirectJDKLog.log:173 INFO  Initializing ProtocolHandler ["http-nio-9090"]
+[2024-09-17 22:36:32.924] [main] DirectJDKLog.log:173 INFO  Starting service [Tomcat]
+[2024-09-17 22:36:32.924] [main] DirectJDKLog.log:173 INFO  Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-17 22:36:32.989] [main] DirectJDKLog.log:173 INFO  Initializing Spring embedded WebApplicationContext
+[2024-09-17 22:36:32.990] [main] ServletWebServerApplicationContext.prepareWebApplicationContext:296 INFO  Root WebApplicationContext: initialization completed in 1707 ms
+[2024-09-17 22:36:33.052] [main] GenericFilterBean.init:240 DEBUG Filter 'jwtAuthorizationFilter' configured for use
+[2024-09-17 22:36:33.076] [main] DefaultLazyEncryptor.lambda$new$1:41 INFO  Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@2f99d8c with name: jasyptStringEncryptor
+[2024-09-17 22:36:33.098] [main] PriJpaConfig.priDataSource:34 INFO  org.mariadb.jdbc.Driver localhost 3306 dev user
+[2024-09-17 22:36:33.175] [main] LogHelper.logPersistenceUnitInformation:31 INFO  HHH000204: Processing PersistenceUnitInfo [name: priEntityManager]
+[2024-09-17 22:36:33.223] [main] Version.logVersion:44 INFO  HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-09-17 22:36:33.254] [main] RegionFactoryInitiator.initiateService:50 INFO  HHH000026: Second-level cache disabled
+[2024-09-17 22:36:33.605] [main] SpringPersistenceUnitInfo.addTransformer:87 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-17 22:36:33.631] [main] HikariDataSource.getConnection:109 INFO  HikariPool-1 - Starting...
+[2024-09-17 22:36:33.702] [main] HikariPool.checkFailFast:554 INFO  HikariPool-1 - Added connection org.mariadb.jdbc.Connection@3c538e62
+[2024-09-17 22:36:33.704] [main] HikariDataSource.getConnection:122 INFO  HikariPool-1 - Start completed.
+[2024-09-17 22:36:33.730] [main] DialectFactoryImpl.constructDialect:153 WARN  HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-17 22:36:34.468] [main] JtaPlatformInitiator.initiateService:59 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-17 22:36:34.471] [main] AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 INFO  Initialized JPA EntityManagerFactory for persistence unit 'priEntityManager'
+[2024-09-17 22:36:35.120] [main] UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 WARN  
+
+Using generated security password: f88c042e-804c-49af-9d9d-6601c95efc93
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2024-09-17 22:36:35.134] [main] InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure:113 INFO  Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2024-09-17 22:36:35.932] [main] DirectJDKLog.log:173 INFO  Starting ProtocolHandler ["http-nio-9090"]
+[2024-09-17 22:36:35.945] [main] TomcatWebServer.start:243 INFO  Tomcat started on port 9090 (http) with context path '/'
+[2024-09-17 22:36:35.947] [main] RefreshScopeRefreshedEventListener.onApplicationEvent:70 INFO  Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+[2024-09-17 22:36:35.947] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source systemProperties refreshed
+[2024-09-17 22:36:35.947] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source systemEnvironment refreshed
+[2024-09-17 22:36:35.947] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source random refreshed
+[2024-09-17 22:36:35.947] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source Config resource 'class path resource [application-local.yml]' via location 'optional:classpath:/' refreshed
+[2024-09-17 22:36:35.947] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+[2024-09-17 22:36:35.947] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+[2024-09-17 22:36:35.947] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[2024-09-17 22:36:35.947] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+[2024-09-17 22:36:35.956] [main] StartupInfoLogger.logStarted:56 INFO  Started PretaskApplication in 5.159 seconds (process running for 5.72)
+[2024-09-17 22:36:35.959] [main] AppInitializer.run:21 INFO  AppInitializer Args: []
+[2024-09-17 22:36:35.960] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:36:36.022] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:36:36.025] [main] Slf4JLogger.logSQL:60 INFO  #1726580196025 | took 7ms | statement | connection 1| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+SELECT count(*) FROM information_schema.tables WHERE table_name = ?
+SELECT count(*) FROM information_schema.tables WHERE table_name = 'fl_profile';
+[2024-09-17 22:36:36.038] [main] FreelancerServiceImpl.lambda$createFreelancerTable$0:59 INFO  ----- fl_profile 테이블이 존재합니다. 
+[2024-09-17 22:36:36.039] [main] Slf4JLogger.logSQL:60 INFO  #1726580196039 | took 0ms | commit | connection 1| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+
+;
+[2024-09-17 22:36:36.281] [main] Slf4JLogger.logSQL:60 INFO  #1726580196281 | took 1ms | statement | connection 2| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+select count(*) from fl_profile f1_0
+select count(*) from fl_profile f1_0;
+[2024-09-17 22:36:36.283] [main] Slf4JLogger.logSQL:60 INFO  #1726580196283 | took 0ms | commit | connection 2| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+
+;
+[2024-09-17 22:36:40.578] [http-nio-9090-exec-1] DirectJDKLog.log:173 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-17 22:36:40.579] [http-nio-9090-exec-1] FrameworkServlet.initServletBean:532 INFO  Initializing Servlet 'dispatcherServlet'
+[2024-09-17 22:36:40.580] [http-nio-9090-exec-1] FrameworkServlet.initServletBean:554 INFO  Completed initialization in 1 ms
+[2024-09-17 22:36:41.049] [http-nio-9090-exec-9] AbstractOpenApiResource.getOpenApi:387 INFO  Init duration for springdoc-openapi is: 272 ms
+[2024-09-17 22:37:05.962] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:37:05.963] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:37:35.963] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:37:35.965] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:38:05.956] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:38:05.958] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:38:35.957] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:38:35.958] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:39:05.966] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:39:05.968] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:39:22.071] [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean.destroy:650 INFO  Closing JPA EntityManagerFactory for persistence unit 'priEntityManager'
+[2024-09-17 22:39:22.072] [SpringApplicationShutdownHook] HikariDataSource.close:349 INFO  HikariPool-1 - Shutdown initiated...
+[2024-09-17 22:39:22.081] [SpringApplicationShutdownHook] HikariDataSource.close:351 INFO  HikariPool-1 - Shutdown completed.
+[2024-09-17 22:39:25.668] [background-preinit] Version.<clinit>:21 INFO  HV000001: Hibernate Validator 8.0.1.Final
+[2024-09-17 22:39:25.700] [main] StartupInfoLogger.logStarting:50 INFO  Starting PretaskApplication using Java 21.0.2 with PID 29060 (C:\java-workspace\pretest-leesangyub\out\production\classes started by exsyl in C:\java-workspace\pretest-leesangyub)
+[2024-09-17 22:39:25.701] [main] StartupInfoLogger.logStarting:51 DEBUG Running with Spring Boot v3.3.3, Spring v6.1.12
+[2024-09-17 22:39:25.701] [main] SpringApplication.logStartupProfileInfo:660 INFO  The following 1 profile is active: "local"
+[2024-09-17 22:39:26.265] [main] RepositoryConfigurationDelegate.multipleStoresDetected:295 INFO  Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-09-17 22:39:26.265] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:143 INFO  Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2024-09-17 22:39:26.386] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:211 INFO  Finished Spring Data repository scanning in 108 ms. Found 1 JPA repository interface.
+[2024-09-17 22:39:26.636] [main] RepositoryConfigurationDelegate.multipleStoresDetected:295 INFO  Multiple Spring Data modules found, entering strict repository configuration mode
+[2024-09-17 22:39:26.637] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:143 INFO  Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[2024-09-17 22:39:26.661] [main] RepositoryConfigurationExtensionSupport.isStrictRepositoryCandidate:320 INFO  Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.pretest.leesangyub.repository.pri.FreelancerRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+[2024-09-17 22:39:26.661] [main] RepositoryConfigurationDelegate.registerRepositoriesIn:211 INFO  Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+[2024-09-17 22:39:26.911] [main] EnableEncryptablePropertiesBeanFactoryPostProcessor.postProcessBeanFactory:44 INFO  Post-processing PropertySource instances
+[2024-09-17 22:39:26.911] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+[2024-09-17 22:39:26.911] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[2024-09-17 22:39:26.912] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[2024-09-17 22:39:26.913] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[2024-09-17 22:39:26.913] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[2024-09-17 22:39:26.913] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[2024-09-17 22:39:26.913] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource Config resource 'class path resource [application-local.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[2024-09-17 22:39:26.913] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[2024-09-17 22:39:27.157] [main] DefaultLazyPropertyFilter.lambda$new$2:45 INFO  Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[2024-09-17 22:39:27.165] [main] DefaultLazyPropertyResolver.lambda$new$2:46 INFO  Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[2024-09-17 22:39:27.167] [main] DefaultLazyPropertyDetector.lambda$new$2:44 INFO  Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[2024-09-17 22:39:27.339] [main] TomcatWebServer.initialize:111 INFO  Tomcat initialized with port 9090 (http)
+[2024-09-17 22:39:27.347] [main] DirectJDKLog.log:173 INFO  Initializing ProtocolHandler ["http-nio-9090"]
+[2024-09-17 22:39:27.351] [main] DirectJDKLog.log:173 INFO  Starting service [Tomcat]
+[2024-09-17 22:39:27.351] [main] DirectJDKLog.log:173 INFO  Starting Servlet engine: [Apache Tomcat/10.1.28]
+[2024-09-17 22:39:27.409] [main] DirectJDKLog.log:173 INFO  Initializing Spring embedded WebApplicationContext
+[2024-09-17 22:39:27.410] [main] ServletWebServerApplicationContext.prepareWebApplicationContext:296 INFO  Root WebApplicationContext: initialization completed in 1674 ms
+[2024-09-17 22:39:27.472] [main] GenericFilterBean.init:240 DEBUG Filter 'jwtAuthorizationFilter' configured for use
+[2024-09-17 22:39:27.494] [main] DefaultLazyEncryptor.lambda$new$1:41 INFO  Found Custom Encryptor Bean org.jasypt.encryption.pbe.PooledPBEStringEncryptor@44492c06 with name: jasyptStringEncryptor
+[2024-09-17 22:39:27.515] [main] PriJpaConfig.priDataSource:34 INFO  org.mariadb.jdbc.Driver localhost 3306 dev user
+[2024-09-17 22:39:27.599] [main] LogHelper.logPersistenceUnitInformation:31 INFO  HHH000204: Processing PersistenceUnitInfo [name: priEntityManager]
+[2024-09-17 22:39:27.652] [main] Version.logVersion:44 INFO  HHH000412: Hibernate ORM core version 6.5.2.Final
+[2024-09-17 22:39:27.685] [main] RegionFactoryInitiator.initiateService:50 INFO  HHH000026: Second-level cache disabled
+[2024-09-17 22:39:28.088] [main] SpringPersistenceUnitInfo.addTransformer:87 INFO  No LoadTimeWeaver setup: ignoring JPA class transformer
+[2024-09-17 22:39:28.112] [main] HikariDataSource.getConnection:109 INFO  HikariPool-1 - Starting...
+[2024-09-17 22:39:28.183] [main] HikariPool.checkFailFast:554 INFO  HikariPool-1 - Added connection org.mariadb.jdbc.Connection@c49e434
+[2024-09-17 22:39:28.184] [main] HikariDataSource.getConnection:122 INFO  HikariPool-1 - Start completed.
+[2024-09-17 22:39:28.210] [main] DialectFactoryImpl.constructDialect:153 WARN  HHH90000025: MariaDBDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+[2024-09-17 22:39:28.925] [main] JtaPlatformInitiator.initiateService:59 INFO  HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+[2024-09-17 22:39:28.928] [main] AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory:437 INFO  Initialized JPA EntityManagerFactory for persistence unit 'priEntityManager'
+[2024-09-17 22:39:29.615] [main] UserDetailsServiceAutoConfiguration.getOrDeducePassword:86 WARN  
+
+Using generated security password: 5f541ff4-1365-496a-84a3-dd98e11aea57
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+[2024-09-17 22:39:29.629] [main] InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer.configure:113 INFO  Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+[2024-09-17 22:39:30.463] [main] DirectJDKLog.log:173 INFO  Starting ProtocolHandler ["http-nio-9090"]
+[2024-09-17 22:39:30.476] [main] TomcatWebServer.start:243 INFO  Tomcat started on port 9090 (http) with context path '/'
+[2024-09-17 22:39:30.477] [main] RefreshScopeRefreshedEventListener.onApplicationEvent:70 INFO  Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+[2024-09-17 22:39:30.477] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source systemProperties refreshed
+[2024-09-17 22:39:30.478] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source systemEnvironment refreshed
+[2024-09-17 22:39:30.478] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source random refreshed
+[2024-09-17 22:39:30.478] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source Config resource 'class path resource [application-local.yml]' via location 'optional:classpath:/' refreshed
+[2024-09-17 22:39:30.478] [main] CachingDelegateEncryptablePropertySource.refresh:92 INFO  Property Source Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' refreshed
+[2024-09-17 22:39:30.478] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+[2024-09-17 22:39:30.478] [main] EncryptablePropertySourceConverter.makeEncryptable:105 INFO  Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[2024-09-17 22:39:30.478] [main] EncryptablePropertySourceConverter.makeEncryptable:110 INFO  Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+[2024-09-17 22:39:30.487] [main] StartupInfoLogger.logStarted:56 INFO  Started PretaskApplication in 5.232 seconds (process running for 5.744)
+[2024-09-17 22:39:30.490] [main] AppInitializer.run:21 INFO  AppInitializer Args: []
+[2024-09-17 22:39:30.491] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:39:30.556] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:39:30.563] [main] Slf4JLogger.logSQL:60 INFO  #1726580370563 | took 8ms | statement | connection 1| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+SELECT count(*) FROM information_schema.tables WHERE table_name = ?
+SELECT count(*) FROM information_schema.tables WHERE table_name = 'fl_profile';
+[2024-09-17 22:39:30.577] [main] FreelancerServiceImpl.lambda$createFreelancerTable$0:59 INFO  ----- fl_profile 테이블이 존재합니다. 
+[2024-09-17 22:39:30.578] [main] Slf4JLogger.logSQL:60 INFO  #1726580370578 | took 0ms | commit | connection 1| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+
+;
+[2024-09-17 22:39:30.814] [main] Slf4JLogger.logSQL:60 INFO  #1726580370814 | took 1ms | statement | connection 2| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+select count(*) from fl_profile f1_0
+select count(*) from fl_profile f1_0;
+[2024-09-17 22:39:30.816] [main] Slf4JLogger.logSQL:60 INFO  #1726580370816 | took 0ms | commit | connection 2| url jdbc:mariadb://localhost/dev?user=user&password=***&rewriteBatchedStatements=true&serverTimezone=asia/seoul&characterEncoding=UTF-8
+
+;
+[2024-09-17 22:39:30.918] [http-nio-9090-exec-1] DirectJDKLog.log:173 INFO  Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2024-09-17 22:39:30.919] [http-nio-9090-exec-1] FrameworkServlet.initServletBean:532 INFO  Initializing Servlet 'dispatcherServlet'
+[2024-09-17 22:39:30.920] [http-nio-9090-exec-1] FrameworkServlet.initServletBean:554 INFO  Completed initialization in 1 ms
+[2024-09-17 22:39:31.415] [http-nio-9090-exec-7] AbstractOpenApiResource.getOpenApi:387 INFO  Init duration for springdoc-openapi is: 291 ms
+[2024-09-17 22:40:00.496] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:40:00.498] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:40:30.499] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:40:30.501] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:41:00.499] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:41:00.501] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:41:30.489] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:41:30.490] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:42:00.496] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:42:00.498] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:42:30.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:42:30.496] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:43:00.486] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:43:00.488] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:43:30.493] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:43:30.495] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:44:00.496] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:44:00.498] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:44:30.498] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:44:30.500] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:45:00.496] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:45:00.498] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:45:30.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:45:30.496] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:46:00.497] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:46:00.498] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:46:30.498] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:46:30.500] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:47:00.488] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:47:00.489] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:47:30.491] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:47:30.493] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:48:00.497] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:48:00.498] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:48:30.496] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:48:30.498] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:49:00.498] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:49:00.503] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:49:30.498] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:49:30.500] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:50:00.486] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:50:00.488] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:50:30.493] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:50:30.495] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:51:00.493] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:51:00.495] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:51:30.500] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:51:30.501] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:52:00.498] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:52:00.500] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:52:30.491] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:52:30.493] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:53:00.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:53:00.496] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:53:30.490] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:53:30.492] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:54:00.499] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:54:00.500] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:54:30.498] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:54:30.500] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:55:00.498] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:55:00.500] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:55:30.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:55:30.496] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:56:00.488] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:56:00.490] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:56:30.488] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:56:30.489] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:57:00.490] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:57:00.493] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:57:30.489] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:57:30.490] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:58:00.488] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:58:00.490] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:58:30.487] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:58:30.489] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:59:00.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:59:00.496] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 22:59:30.487] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 22:59:30.489] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:00:00.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:00:00.497] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:00:30.487] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:00:30.488] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:01:00.487] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:01:00.489] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:01:30.491] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:01:30.493] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:02:00.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:02:00.495] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:02:30.496] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:02:30.498] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:03:00.493] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:03:00.495] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:03:30.486] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:03:30.488] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:04:00.486] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:04:00.487] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:04:30.501] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:04:30.502] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:05:00.492] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:05:00.494] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:05:30.487] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:05:30.488] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:06:00.499] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:06:00.501] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:06:30.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:06:30.496] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:07:00.488] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:07:00.490] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:07:30.495] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:07:30.496] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:08:00.499] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:08:00.500] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:08:30.500] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:08:30.501] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:09:00.486] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:09:00.488] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:09:30.496] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:09:30.497] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:10:00.495] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:10:00.497] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:10:30.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:10:30.496] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:11:00.491] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:11:00.493] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:11:30.492] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:11:30.494] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:12:00.487] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:12:00.488] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:12:30.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:12:30.495] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:13:00.496] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:13:00.498] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:13:30.498] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:13:30.500] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:14:00.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:14:00.495] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:14:30.487] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:14:30.489] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:15:00.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:15:00.496] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:15:30.488] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:15:30.489] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:16:00.490] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:16:00.492] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:16:30.494] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:16:30.496] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:17:00.486] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:17:00.488] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:17:30.490] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:17:30.491] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:18:00.496] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:18:00.498] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:18:30.492] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:18:30.493] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:19:00.500] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:19:00.502] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:19:30.495] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:19:30.496] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:20:00.498] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:20:00.499] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:20:30.499] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:20:30.501] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:21:00.497] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:21:00.498] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:21:30.488] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:21:30.490] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:22:00.491] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:22:00.493] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:22:30.495] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:22:30.497] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:23:00.496] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:23:00.498] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:23:30.491] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:23:30.492] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:24:00.500] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:24:00.502] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:24:30.489] [scheduling-1] FreelancerManager.updateViewCounts:59 INFO  FreelancerManager updateViewCounts -------------------- 
+[2024-09-17 23:24:30.490] [scheduling-1] FreelancerManager.updateViewCounts:77 INFO  FreelancerManager updateViewCounts -- nothing to update
+[2024-09-17 23:24:35.580] [SpringApplicationShutdownHook] AbstractEntityManagerFactoryBean.destroy:650 INFO  Closing JPA EntityManagerFactory for persistence unit 'priEntityManager'
+[2024-09-17 23:24:35.581] [SpringApplicationShutdownHook] HikariDataSource.close:349 INFO  HikariPool-1 - Shutdown initiated...
+[2024-09-17 23:24:35.588] [SpringApplicationShutdownHook] HikariDataSource.close:351 INFO  HikariPool-1 - Shutdown completed.
